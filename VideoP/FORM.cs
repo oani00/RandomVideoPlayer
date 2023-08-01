@@ -1,8 +1,8 @@
 namespace VideoP
 {
-    public partial class Form1 : Form
+    public partial class FORM : Form
     {
-        public Form1()
+        public FORM()
         {
             InitializeComponent();
         }
