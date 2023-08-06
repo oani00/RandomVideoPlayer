@@ -8,26 +8,17 @@ namespace VideoP
 {
     internal class Configs
     {
-        public string VideoFolderPath;
+        public string VideoFolderPath = @"C:\backupsON\DEL VIDINHOS LEVAR PAI";
+        public string ConfigsPath = "@Configs";
 
         public Configs()
         {
-            VideoFolderPath = GetVideoFolderPath();
-        }
-
-        private string GetVideoFolderPath()
-        {
-            if (VideoFolderPath == null)
-            {
-                string configFolderPath = CriaPasta();
-            }
-
-            return VideoFolderPath;
+            //VideoFolderPath = GetVideoFolderPath();
         }
 
         private void EscreverConfig(string configFile)
         {
-            string configFile = Path.Combine(configFolderPath, "videoFolder.txt");
+            configFile = Path.Combine(ConfigsPath, "videoFolder.txt");
             if (!File.Exists(configFile))
             {
                 Console.Write("Enter the path of the folder where your videos are stored: ");
@@ -48,12 +39,12 @@ namespace VideoP
             return configFolderPath;
         }
 
-        public void SetVideoFolderPath(string VideoFolderPath)
+        public void SetVideoFolderPath(string videoFolderPath)
         {
-            Configs.VideoFolderPath = VideoFolderPath;
+            VideoFolderPath = videoFolderPath;
 
             string configFile = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configs"), "videoFolder.txt");
-            File.WriteAllText(configFile, VideoFolderPath);
+            File.WriteAllText(configFile, videoFolderPath);
         }
     }
 }

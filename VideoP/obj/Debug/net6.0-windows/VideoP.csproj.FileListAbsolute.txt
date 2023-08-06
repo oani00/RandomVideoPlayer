@@ -1,0 +1,17 @@
+C:\backupsON\REPORandomVideoPlayer\VideoP\bin\Debug\net6.0-windows\VideoP.exe
+C:\backupsON\REPORandomVideoPlayer\VideoP\bin\Debug\net6.0-windows\VideoP.deps.json
+C:\backupsON\REPORandomVideoPlayer\VideoP\bin\Debug\net6.0-windows\VideoP.runtimeconfig.json
+C:\backupsON\REPORandomVideoPlayer\VideoP\bin\Debug\net6.0-windows\VideoP.dll
+C:\backupsON\REPORandomVideoPlayer\VideoP\bin\Debug\net6.0-windows\VideoP.pdb
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.csproj.AssemblyReference.cache
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.FORM.resources
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.csproj.GenerateResource.cache
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.GeneratedMSBuildEditorConfig.editorconfig
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.AssemblyInfoInputs.cache
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.AssemblyInfo.cs
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.csproj.CoreCompileInputs.cache
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.dll
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\refint\VideoP.dll
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.pdb
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\VideoP.genruntimeconfig.cache
+C:\backupsON\REPORandomVideoPlayer\VideoP\obj\Debug\net6.0-windows\ref\VideoP.dll
