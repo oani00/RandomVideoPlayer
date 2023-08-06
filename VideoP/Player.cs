@@ -16,25 +16,33 @@ namespace VideoP
             Configs = configs;
         }
 
-        public void PlayRandomVideo()
+        public void PlayRandomVideo(RichTextBox output)
         {
-            List<string> videoFiles = GetAllVideoFiles(Configs.VideoFolderPath);
+            try
+            {
+                List<string> videoFiles = GetAllVideoFiles(Configs.VideoFolderPath);
 
-            if (videoFiles.Count == 0)
-                throw new Exception("No video files found in the specified folder.");
+                if (videoFiles.Count == 0)
+                    throw new Exception("No video files found in the specified folder.");
 
-            Random random = new Random();
-            int videoIndex = random.Next(0, videoFiles.Count);
-            int randomDelaySeconds = random.Next(5, 20); // Adjust the range of the delay as you like
+                Random random = new Random();
+                int videoIndex = random.Next(0, videoFiles.Count);
+                int randomDelaySeconds = random.Next(5, 20); // Adjust the range of the delay as you like
 
-            string selectedVideoPath = videoFiles[videoIndex];
+                string selectedVideoPath = videoFiles[videoIndex];
 
-            Console.WriteLine("Selected video: " + selectedVideoPath);
-            Console.WriteLine("Random delay: " + randomDelaySeconds + " seconds");
+                output.Text += "Selected video: " + selectedVideoPath;
+                output.Text += "\n";
+                output.Text += "Random delay: " + randomDelaySeconds + " seconds";
 
-            System.Threading.Thread.Sleep(randomDelaySeconds * 1000);
-
-            Process.Start("vlc.exe", selectedVideoPath);
+                float startOffsetSeconds = random.Next(500, 3000); // Adjust the range of the start offset as you like
+                Process.Start(Configs.VLCPath, selectedVideoPath + " --start-time=" + startOffsetSeconds);
+            }
+            catch (Exception ex)
+            {
+                output.Text += "\n";
+                output.Text += "Erro: " + ex.Message;
+            }
         }
 
         private List<string> GetAllVideoFiles(string folderPath)
@@ -46,6 +54,9 @@ namespace VideoP
             {
                 if (Array.Exists(allowedExtensions, ext => ext.Equals(Path.GetExtension(file), StringComparison.OrdinalIgnoreCase)))
                 {
+                    if (file.Contains(" "))
+                        throw new FormatException("Nenhum arquivo pode conter espaços no nome");
+
                     videoFiles.Add(file);
                 }
             }

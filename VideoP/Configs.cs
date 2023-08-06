@@ -8,8 +8,9 @@ namespace VideoP
 {
     internal class Configs
     {
-        public string VideoFolderPath = @"C:\backupsON\DEL VIDINHOS LEVAR PAI";
-        public string ConfigsPath = "@Configs";
+        public string VLCPath = @"C:\Program Files\VideoLAN\VLC\vlc.exe";
+        public string VideoFolderPath = @"C:\backupsON\TESTEVIDS";
+        public string ConfigsPath = @"Configs";
 
         public Configs()
         {
